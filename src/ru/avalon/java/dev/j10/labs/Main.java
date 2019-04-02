@@ -4,14 +4,14 @@ import ru.avalon.java.dev.j10.labs.models.Person;
 
 public class Main {
 
-    Main() {
+    public static void main(String[] args) {
 
         /*
          * FIXME(Студент): Измените определение метода так, чтобы он стал точкой входа в приложение.
          */
 
-        Person ivanov = null;
-        Person smith = null;
+        Person ivanov = new Person("Иванов", "Иван", "Иванович", "");
+        Person smith = new Person("John", "Edvard", "Smith", "");
 
         /*
          * TODO(Студент): Создайте экземпляры класса 'Person'
@@ -24,7 +24,11 @@ public class Main {
          *    чтобы она адресовала объект типа 'Person'
          *    описывающий человека по имени 'John Edvard Smith'.
          */
-
+        
+        String fullNameIvanov = ivanov.getFullName();
+        String fullNameSmith = smith.getFullName();
+        String addressIvanov = ivanov.getAddress();
+        String addressSmith = smith.getAddress();
         /*
          * TODO(Студент): Создайте несколько строковых переменных:
          *
@@ -45,6 +49,10 @@ public class Main {
          *    переменной 'smith'.
          */
 
+        System.out.println("Человек: "+fullNameIvanov);
+        System.out.println("Адрес проживания: "+addressIvanov);
+        System.out.println("Человек: "+fullNameSmith);
+        System.out.println("Адрес проживания: "+addressSmith);
         /*
          * TODO(Студент): Выведите в консоль значения созданных строковых переменных:
          *
