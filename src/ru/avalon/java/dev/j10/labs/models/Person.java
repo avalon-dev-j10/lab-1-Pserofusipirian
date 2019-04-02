@@ -1,6 +1,5 @@
 package ru.avalon.java.dev.j10.labs.models;
 
-import ru.avalon.java.dev.j10.labs.commons.Address;
 /**
  * Представление о человеке.
  * <p>
@@ -13,7 +12,7 @@ import ru.avalon.java.dev.j10.labs.commons.Address;
  * </ol>
  */
 public class Person {
-    
+
     /*
      * TODO(Студент): Создайте класс Address.
      *
@@ -29,24 +28,7 @@ public class Person {
      * 4. Подумайте над тем, какие методы должны быть объявлены
      *    в классе.
      */
-    public Passport passport;
-    public Address address;
-    
-    public Person(String name, String surname, String middleName, String secondName){
-        
-        this.passport = new Passport(name, surname, middleName, secondName);
-        this.address = new Address();
-    }
-    
-    public void SetAddress(int index, String city, String street, String houseNumber, String apartmentNumber){
-        address.index = index;
-        address.city = city;
-        address.street = street;
-        address.houseNumber = houseNumber;
-        address.apartmentNumber = apartmentNumber;
-        
-    }
-    
+
     /**
      * Возврвщает полное имя человека.
      * <p>
@@ -68,15 +50,7 @@ public class Person {
         /*
          * TODO(Студент): Закончить определение метода 'getFullName()' класса 'Person'
          */
-        if (passport.middleName != null) {
-            return passport.name+" "+passport.surname+" "+passport.middleName;
-        }
-        else if (passport.secondName != null) {
-            return passport.name+" "+passport.secondName.charAt(0)+". "+passport.surname;
-        }    
-        else {    
-            return passport.name+" "+passport.surname;
-        }
+        return null;
     }
 
     /**
@@ -91,36 +65,6 @@ public class Person {
         /*
          * TODO(Студент): Закончить определение метода 'getAddress()' класса 'Person'
          */
-        String fullAddress = null;
-        if (address.index != 0) {
-            fullAddress = fullAddress+", "+address.index;
-        } 
-        if (address.city != null) {
-            if (fullAddress != null) {
-                fullAddress = fullAddress+", "+address.city;
-            }
-        }
-        if (address.street != null) {
-            if (fullAddress != null) {
-                fullAddress = fullAddress+", "+address.street;
-            }
-        }
-        if (address.houseNumber != null) {
-            if (fullAddress != null) {
-                fullAddress = fullAddress+", "+address.houseNumber;
-            }
-        }
-        if (address.apartmentNumber != null) {
-            if (fullAddress != null) {
-                fullAddress = fullAddress+", "+address.apartmentNumber;
-            }
-        }
-        
-        if (fullAddress == null){
-            return "Не указан";
-        }
-        else{
-            return fullAddress;
-        }        
+        return null;
     }
 }
