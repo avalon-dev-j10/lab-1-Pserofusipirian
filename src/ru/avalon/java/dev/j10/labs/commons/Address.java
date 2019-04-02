@@ -1,3 +1,5 @@
+package ru.avalon.java.dev.j10.labs.commons;
+
 /*
  * TODO(Студент): Создайте класс Address.
  *
@@ -13,3 +15,14 @@
  * 4. Подумайте над тем, какие методы должны быть объявлены
  *    в классе.
  */
+//Область видимости - public, так как класс используется в другом пакете. Переменные необходимо считывать/иницифлизировать
+//там же, потому создание каких-либо методов здесь доступ не ограничит (их все равно придется делать public)
+public class Address {
+    
+    public int index;
+    public String city;
+    public String street;
+    public String houseNumber;
+    public String apartmentNumber;
+    
+}
